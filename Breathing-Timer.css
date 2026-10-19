@@ -1,0 +1,198 @@
+* {
+
+body {
+    background: #090d16;
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(6, 182, 212, 0.12) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(59, 130, 246, 0.12) 0px, transparent 50%);
+    color: #f8fafc;
+    min-height: 100vh;
+    padding: 24px;
+}
+
+.app-layout {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 24px;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 380px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 4px;
+}
+
+.brand-icon { font-size: 26px; }
+.brand h2 { font-size: 22px; font-weight: 700; }
+.brand span { color: #06b6d4; }
+
+.form-card {
+    background: rgba(30, 41, 59, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    padding: 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-card h3 { font-size: 17px; font-weight: 600; }
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-group label { font-size: 13px; color: #94a3b8; }
+
+input[type="number"] {
+    background: #0f172a;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 12px;
+    border-radius: 8px;
+    color: white;
+    font-size: 15px;
+    outline: none;
+}
+
+input[type="number"]:focus {
+    border-color: #06b6d4;
+    box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.2);
+}
+
+.shortcut-hint {
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px dashed rgba(255, 255, 255, 0.1);
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #94a3b8;
+    text-align: center;
+}
+
+.form-actions { display: flex; gap: 10px; }
+
+button {
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    flex: 1;
+}
+
+.btn-primary { background: #06b6d4; color: white; }
+.btn-primary:hover { background: #0891b2; }
+.btn-secondary { background: #334155; color: white; }
+
+/* Main Visual Area */
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer-card {
+    background: rgba(30, 41, 59, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    width: 100%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.circle-container {
+    width: 280px;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.breath-circle {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(6, 182, 212, 0.4) 0%, rgba(6, 182, 212, 0.1) 70%);
+    border: 2px solid #06b6d4;
+    box-shadow: 0 0 25px rgba(6, 182, 212, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 1s ease-in-out, box-shadow 1s ease-in-out;
+}
+
+.breath-circle.inhale {
+    transform: scale(1.4);
+    box-shadow: 0 0 50px rgba(6, 182, 212, 0.6);
+}
+
+.breath-circle.hold {
+    transform: scale(1.4);
+    box-shadow: 0 0 35px rgba(234, 179, 8, 0.5);
+    border-color: #facc15;
+}
+
+.breath-circle.exhale {
+    transform: scale(1);
+    box-shadow: 0 0 15px rgba(6, 182, 212, 0.2);
+}
+
+#phaseText {
+    font-size: 22px;
+    font-weight: 700;
+    color: white;
+}
+
+#timerCountdown {
+    font-size: 15px;
+    color: #94a3b8;
+    margin-top: 4px;
+}
+
+.progress-bar-container {
+    width: 100%;
+    max-width: 340px;
+    height: 6px;
+    background: #0f172a;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: #06b6d4;
+    transition: width 0.1s linear;
+}
+
+.cycle-stats {
+    font-size: 14px;
+    color: #94a3b8;
+}
+
+.cycle-stats strong {
+    color: #06b6d4;
+    font-size: 18px;
+}
+}

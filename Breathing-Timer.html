@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breathing Exercise Timer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Breathing-Timer.css">
+</head>
+<body>
+
+    <div class="app-layout">
+        <!-- Sidebar Controls -->
+        <aside class="sidebar">
+            <div class="brand">
+                <span class="brand-icon">🫁</span>
+                <h2>Breathe<span>Flow</span></h2>
+            </div>
+
+            <div class="form-card">
+                <h3>Timer Settings</h3>
+                
+                <div class="input-group">
+                    <label for="phaseDuration">Phase Duration (Seconds):</label>
+                    <input type="number" id="phaseDuration"  min="2" max="10">
+                </div>
+
+                <div class="shortcut-hint">
+                    <span>💡 Press <strong>Space</strong> to Play / Pause</span>
+                </div>
+
+                <div class="form-actions">
+                    <button id="startBtn" class="btn-primary">▶ Start</button>
+                    <button id="resetBtn" class="btn-secondary">🔄 Reset</button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Animation Area -->
+        <main class="main-content">
+            <div class="timer-card">
+                <div class="circle-container">
+                    <div id="breathCircle" class="breath-circle">
+                        <span id="phaseText">Ready?</span>
+                        <span id="timerCountdown">4s</span>
+                    </div>
+                </div>
+
+                <div class="progress-bar-container">
+                    <div id="progressBar" class="progress-bar"></div>
+                </div>
+
+                <div class="cycle-stats">
+                    Completed Cycles: <strong id="cycleCount">0</strong>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="Breathing-Timer.js"></script>
+</body>
+</html>
