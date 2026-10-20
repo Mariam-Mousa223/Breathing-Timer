@@ -99,7 +99,6 @@ button {
 .btn-primary:hover { background: #0891b2; }
 .btn-secondary { background: #334155; color: white; }
 
-/* Main Visual Area */
 .main-content {
     display: flex;
     justify-content: center;
@@ -195,4 +194,29 @@ button {
     color: #06b6d4;
     font-size: 18px;
 }
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 15px;
+    margin-left: 0px;
+    color: #06b6d4;
+    text-decoration: none;
+    font-weight: 600;
+    
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+.back-link::before {
+  content: "← "; 
+  margin-right: 6px; 
+  display: inline-block;
+  transition: transform 0.2s ease; 
+}
+
+
+.back-link:hover::before {
+  transform: translateX(-4px); 
 }
